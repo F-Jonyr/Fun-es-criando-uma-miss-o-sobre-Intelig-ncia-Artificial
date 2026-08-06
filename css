@@ -1,0 +1,202 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --cor1:#0f172a;
+    --cor2:#1e293b;
+    --cor3:#334155;
+
+    --azul:#38bdf8;
+    --roxo:#7c3aed;
+    --branco:#f8fafc;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#020617,#0f172a,#1e1b4b);
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+.bg{
+
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    background:
+    radial-gradient(circle at top left,#38bdf833,transparent 40%),
+    radial-gradient(circle at bottom right,#7c3aed55,transparent 40%);
+
+    animation:fundo 8s infinite alternate;
+
+}
+
+@keyframes fundo{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.15);
+    }
+
+}
+
+.caixa-principal{
+
+    position:relative;
+
+    z-index:2;
+
+    width:90%;
+    max-width:750px;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.5);
+
+}
+
+.topo{
+
+    margin-bottom:30px;
+
+}
+
+.topo h1{
+
+    font-size:2rem;
+
+    color:var(--azul);
+
+}
+
+.topo p{
+
+    color:#cbd5e1;
+
+    margin-top:10px;
+
+}
+
+.caixa-perguntas{
+
+    font-size:1.2rem;
+
+    color:white;
+
+    line-height:1.7;
+
+    margin-bottom:30px;
+
+}
+
+.caixa-alternativas{
+
+    display:grid;
+
+    gap:18px;
+
+}
+
+button{
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    background:linear-gradient(135deg,var(--cor2),var(--cor3));
+
+    color:white;
+
+    transition:.35s;
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    background:linear-gradient(135deg,var(--azul),var(--roxo));
+
+    box-shadow:0 10px 30px rgba(56,189,248,.4);
+
+}
+
+.caixa-resultado{
+
+    margin-top:35px;
+
+}
+
+.caixa-resultado h2{
+
+    color:var(--azul);
+
+    margin-bottom:15px;
+
+}
+
+.texto-resultado{
+
+    color:white;
+
+    line-height:1.8;
+
+}
+
+footer{
+
+    margin-top:40px;
+
+    text-align:center;
+
+    font-size:.9rem;
+
+    color:#cbd5e1;
+
+}
+
+footer a{
+
+    color:var(--azul);
+
+    text-decoration:none;
+
+}
+
+footer a:hover{
+
+    color:white;
+
+}
